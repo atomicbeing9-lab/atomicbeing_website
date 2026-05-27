@@ -1,10 +1,76 @@
+HTML
+<!DOCTYPE html>
+<html>
 
-	HTML
+<head>
+
+<title>AtomicBeing AI</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:50px;
+}
+
+h1{
+color:orange;
+}
+
+input{
+width:300px;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:18px;
+}
+
+button{
+padding:15px 25px;
+background:orange;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+#response{
+margin-top:30px;
+font-size:20px;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🤖 AtomicBeing AI</h1>
+
+<p>Ask the AI anything.</p>
+
+<input
+id="question"
+placeholder="Ask a question">
+
+<br><br>
+
+<button onclick="askAI()">
+Ask AI
+</button>
+
+<div id="response"></div>
+
 <script>
 
 async function askAI() {
 
-const apiKey = "AIzaSyAr4ZCAvKj04WazZdWQp2ONNSeKDeNIdZA";
+const apiKey =
+"AIzaSyAr4ZCAvKj04WazZdWQp2ONNSeKDeNIdZA"
 
 const question =
 document.getElementById("question").value;
@@ -28,7 +94,7 @@ contents: [
 {
 parts: [
 {
-text: question								
+text: question
 }
 ]
 }
@@ -62,3 +128,7 @@ console.log(error);
 }
 
 </script>
+
+</body>
+
+</html>
