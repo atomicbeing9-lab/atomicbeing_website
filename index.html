@@ -108,8 +108,16 @@ const data = await response.json();
 
 console.log(data);
 
-const answer =
+JavaScript
+if(data.candidates){
+document.getElementById("response").innerHTML =
 data.candidates[0].content.parts[0].text;
+}
+
+else{
+document.getElementById("response").innerHTML =
+JSON.stringify(data);
+}
 
 document.getElementById("response").innerHTML =
 answer;
