@@ -1,32 +1,114 @@
-html>
+
+HTML
+<!DOCTYPE html>
+<html>
 
 <head>
-<title>AtomicBeing Website</title>
+
+<title>AtomicBeing</title>
+
+<style>
+
+body{
+    margin:0;
+    background:black;
+    color:white;
+    font-family:Arial;
+}
+
+nav{
+    background:#111;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-size:18px;
+}
+
+.hero{
+    text-align:center;
+    margin-top:100px;
+}
+
+h1{
+    color:orange;
+    font-size:40px;
+}
+
+p{
+    font-size:20px;
+}
+
+button{
+    background:orange;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:white;
+}
+
+img{
+    width:250px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+</style>
+
 </head>
 
-<body style="background:black; color:white; text-align:center;">
+<body>
 
-<h1>🔥 Welcome To My Website 🔥</h1>
+<nav>
 
-<p>I created this using Python on Android!</p>
+<h2>🔥 AtomicBeing 🔥</h2>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="250">
+<div>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Login</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Welcome To AtomicBeing</h1>
+
+<p>The future belongs to creators.</p>
+
+<img src="https://picsum.photos/300">
 
 <br><br>
 
-<button onclick="showMessage()">Enter Site</button>
+<button onclick="showMessage()">
+Enter Site
+</button>
+
+</section>
 
 <script>
-function showMessage() {
-    alert("Welcome To My Website!");
+
+function showMessage(){
+    alert("Welcome To AtomicBeing 🔥");
 }
+
 </script>
 
 </body>
 
 </html>
-Then
-
 		
 
 
