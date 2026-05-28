@@ -149,7 +149,30 @@ font-size:16px;
 background:#222;
 color:white;
 }
+<h1 class="section-title">
+Sell Your Product
+</h1>
 
+<div class="login-box">
+
+<input
+id="productName"
+placeholder="Product Name">
+
+<input
+id="productPrice"
+placeholder="Price">
+
+<button onclick="addProduct()">
+Add Product
+</button>
+
+</div>
+
+<section
+class="products"
+id="productList">
+</section>
 footer{
 text-align:center;
 padding:35px;
@@ -326,7 +349,35 @@ alert("Seller system coming soon.");
 function loginUser(){
 alert("Login system coming soon.");
 }
+function addProduct(){
 
+let name =
+document.getElementById("productName").value;
+
+let price =
+document.getElementById("productPrice").value;
+
+let product =
+`
+<div class="card">
+
+<img src="https://picsum.photos/300?random=${Math.random()}">
+
+<h2>${name}</h2>
+
+<p>$${price}</p>
+
+<button onclick="buyItem('${name}')">
+Buy Now
+</button>
+
+</div>
+`;
+
+document.getElementById("productList")
+.innerHTML += product;
+
+}
 </script>
 
 </body>
