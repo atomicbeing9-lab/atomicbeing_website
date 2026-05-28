@@ -1,4 +1,3 @@
-
 HTML
 <!DOCTYPE html>
 <html>
@@ -7,24 +6,33 @@ HTML
 
 <title>AtomicBeing Market</title>
 
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial;
-background:#0a0a0a;
+}
+
+body{
+background:black;
 color:white;
 }
 
-nav{
+header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:20px;
 background:#111;
+box-shadow:0 0 20px orange;
 position:sticky;
 top:0;
-box-shadow:0 0 15px rgba(255,165,0,0.2);
+z-index:1000;
 }
 
 .logo{
@@ -35,120 +43,408 @@ color:orange;
 
 nav a{
 color:white;
+margin:10px;
 text-decoration:none;
-margin:15px;
-font-size:18px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:orange;
+font-size:15px;
 }
 
 .hero{
 text-align:center;
-padding:120px 20px;
-background:linear-gradient(to right,#000,#1a1a1a);
+padding:80px 20px;
+background:linear-gradient(
+to bottom,
+#111,
+black
+);
 }
 
 .hero h1{
-font-size:65px;
+font-size:55px;
 color:orange;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:24px;
-color:#ddd;
+font-size:20px;
+color:#ccc;
+margin-bottom:30px;
 }
 
-button{
+.btn{
 background:orange;
+color:black;
+padding:15px 25px;
 border:none;
-padding:15px 35px;
-font-size:20px;
 border-radius:12px;
-cursor:pointer;
-margin-top:30px;
 font-weight:bold;
+cursor:pointer;
 transition:0.3s;
 }
 
-button:hover{
-background:white;
+.btn:hover{
 transform:scale(1.05);
 }
 
 .section-title{
 text-align:center;
-font-size:45px;
-margin-top:70px;
+font-size:42px;
+margin-top:60px;
 margin-bottom:20px;
 color:orange;
+}
+
+.search-box{
+display:flex;
+justify-content:center;
+margin:30px;
+}
+
+.search-box input{
+width:300px;
+padding:15px;
+border:none;
+border-radius:10px;
 }
 
 .products{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:35px;
-padding:40px;
+gap:30px;
+padding:30px;
 }
 
 .card{
 background:#111;
+width:300px;
 padding:20px;
 border-radius:20px;
-width:280px;
 text-align:center;
-box-shadow:0 0 20px rgba(255,165,0,0.15);
+box-shadow:0 0 25px rgba(255,165,0,0.3);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(255,165,0,0.4);
+transform:translateY(-8px);
 }
 
 .card img{
 width:100%;
+height:200px;
+object-fit:cover;
 border-radius:15px;
 }
 
 .card h2{
-color:orange;
 margin-top:15px;
+color:orange;
 }
 
 .card p{
+margin:10px 0;
 color:#ccc;
 }
 
 .login-box{
-width:340px;
-margin:auto;
 background:#111;
-padding:35px;
+width:320px;
+margin:auto;
+padding:30px;
 border-radius:20px;
-margin-top:60px;
+box-shadow:0 0 20px rgba(255,165,0,0.3);
 text-align:center;
-box-shadow:0 0 20px rgba(255,165,0,0.15);
-}
-
-.login-box h1{
-color:orange;
 }
 
 input{
-width:90%;
-padding:15px;
-margin:12px;
+width:100%;
+padding:14px;
+margin:10px 0;
 border:none;
 border-radius:10px;
-font-size:16px;
 background:#222;
 color:white;
 }
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:40px;
+}
+
+.stat-box{
+background:#111;
+padding:30px;
+width:220px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,165,0,0.2);
+}
+
+.stat-box h1{
+color:orange;
+font-size:40px;
+}
+
+.chat-box{
+width:90%;
+max-width:500px;
+margin:auto;
+background:#111;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,165,0,0.2);
+}
+
+.chat-area{
+height:200px;
+overflow:auto;
+background:#222;
+padding:15px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.message{
+background:orange;
+color:black;
+padding:10px;
+border-radius:10px;
+margin:8px 0;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#111;
+margin-top:60px;
+color:#aaa;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:40px;
+}
+
+.products{
+padding:15px;
+}
+
+.card{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+AtomicBeing
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Services</a>
+<a href="#">Login</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>
+Global Digital Marketplace
+</h1>
+
+<p>
+Buy, sell, connect and grow worldwide.
+</p>
+
+<button class="btn"
+onclick="welcome()">
+Start Trading
+</button>
+
+</section>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search products..."
+onkeyup="searchProducts()">
+
+</div>
+
+<h1 class="section-title">
+Featured Products
+</h1>
+
+<section
+class="products"
+id="mainProducts">
+
+<div class="card">
+
+<img src="https://picsum.photos/300?1">
+
+<h2>Gaming Laptop</h2>
+
+<p>
+Powerful performance for gaming and work.
+</p>
+
+<button class="btn"
+onclick="buyItem('Gaming Laptop')">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300?2">
+
+<h2>Smart Phone</h2>
+
+<p>
+Modern smartphone with advanced features.
+</p>
+
+<button class="btn"
+onclick="buyItem('Smart Phone')">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300?3">
+
+<h2>Wireless Headphones</h2>
+
+<p>
+Premium sound quality and long battery.
+</p>
+
+<button class="btn"
+onclick="buyItem('Wireless Headphones')">
+Buy Now
+</button>
+
+</div>
+
+</section>
+
+<h1 class="section-title">
+Popular Services
+</h1>
+
+<section class="products">
+
+<div class="card">
+
+<h2>Website Design</h2>
+
+<p>
+Modern websites for businesses and brands.
+</p>
+
+<button class="btn"
+onclick="contactSeller()">
+Contact Seller
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Video Editing</h2>
+
+<p>
+Professional editing for creators and brands.
+</p>
+
+<button class="btn"
+onclick="contactSeller()">
+Contact Seller
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>AI Solutions</h2>
+
+<p>
+Automation and AI tools for businesses.
+</p>
+
+<button class="btn"
+onclick="contactSeller()">
+Contact Seller
+</button>
+
+</div>
+
+</section>
+
+<h1 class="section-title">
+Marketplace Statistics
+</h1>
+
+<section class="stats">
+
+<div class="stat-box">
+<h1>5K+</h1>
+<p>Users</p>
+</div>
+
+<div class="stat-box">
+<h1>2K+</h1>
+<p>Products</p>
+</div>
+
+<div class="stat-box">
+<h1>800+</h1>
+<p>Sellers</p>
+</div>
+
+</section>
+
+<h1 class="section-title">
+Customer Login
+</h1>
+
+<div class="login-box">
+
+<input
+id="username"
+placeholder="Username">
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button class="btn"
+onclick="loginUser()">
+Login
+</button>
+
+</div>
+
 <h1 class="section-title">
 Sell Your Product
 </h1>
@@ -163,7 +459,8 @@ placeholder="Product Name">
 id="productPrice"
 placeholder="Price">
 
-<button onclick="addProduct()">
+<button class="btn"
+onclick="addProduct()">
 Add Product
 </button>
 
@@ -173,181 +470,25 @@ Add Product
 class="products"
 id="productList">
 </section>
-  <h1 class="section-title">
-Sell Your Product
+
+<h1 class="section-title">
+Community Chat
 </h1>
 
-<div class="login-box">
+<div class="chat-box">
+
+<div
+class="chat-area"
+id="chatArea">
+</div>
 
 <input
-id="productName"
-placeholder="Product Name">
+id="chatInput"
+placeholder="Type message...">
 
-<br><br>
-
-<input
-id="productPrice"
-placeholder="Price">
-
-<br><br>
-
-<button onclick="addProduct()">
-Add Product
-</button>
-
-</div>
-
-<section
-class="products"
-id="productList">
-</section>
-footer{
-text-align:center;
-padding:35px;
-background:#111;
-margin-top:70px;
-color:#aaa;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<nav>
-
-<div class="logo">
-AtomicBeing
-</div>
-
-<div>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#services">Services</a>
-<a href="#login">Login</a>
-</div>
-
-</nav>
-
-<section class="hero">
-
-<h1>Global Trade Starts Here</h1>
-
-<p>
-Buy, sell, connect and grow with people worldwide.
-</p>
-
-<button onclick="welcome()">
-Start Trading
-</button>
-
-</section>
-
-<h1 class="section-title" id="products">
-Featured Products
-</h1>
-
-<section class="products">
-
-<div class="card">
-
-<img src="https://picsum.photos/300?1">
-
-<h2>Gaming Laptop</h2>
-
-<p>High performance laptop for work and gaming.</p>
-
-<button onclick="buyItem('Gaming Laptop')">
-Buy Now
-</button>
-
-</div>
-
-<div class="card">
-
-<img src="https://picsum.photos/300?2">
-
-<h2>Smart Phone</h2>
-
-<p>Modern smartphone with powerful features.</p>
-
-<button onclick="buyItem('Smart Phone')">
-Buy Now
-</button>
-
-</div>
-
-<div class="card">
-
-<img src="https://picsum.photos/300?3">
-
-<h2>Wireless Headphones</h2>
-
-<p>Crystal clear sound and long battery life.</p>
-
-<button onclick="buyItem('Headphones')">
-Buy Now
-</button>
-
-</div>
-
-</section>
-
-<h1 class="section-title" id="services">
-Popular Services
-</h1>
-
-<section class="products">
-
-<div class="card">
-
-<h2>Website Design</h2>
-
-<p>Create stunning modern websites for businesses.</p>
-
-<button onclick="contactSeller()">
-Contact Seller
-</button>
-
-</div>
-
-<div class="card">
-
-<h2>Video Editing</h2>
-
-<p>Professional editing for YouTube and brands.</p>
-
-<button onclick="contactSeller()">
-Contact Seller
-</button>
-
-</div>
-
-<div class="card">
-
-<h2>AI Solutions</h2>
-
-<p>Smart automation and AI powered systems.</p>
-
-<button onclick="contactSeller()">
-Contact Seller
-</button>
-
-</div>
-
-</section>
-
-<div class="login-box" id="login">
-
-<h1>User Login</h1>
-
-<input type="text" placeholder="Username">
-
-<input type="password" placeholder="Password">
-
-<button onclick="loginUser()">
-Login
+<button class="btn"
+onclick="sendMessage()">
+Send
 </button>
 
 </div>
@@ -355,7 +496,7 @@ Login
 <footer>
 
 <p>
-© 2026 AtomicBeing Market — All Rights Reserved
+© AtomicBeing Global Marketplace
 </p>
 
 </footer>
@@ -375,8 +516,19 @@ alert("Seller system coming soon.");
 }
 
 function loginUser(){
-alert("Login system coming soon.");
+
+let user =
+document.getElementById("username").value;
+
+if(user==""){
+alert("Enter Username");
 }
+else{
+alert("Welcome " + user);
+}
+
+}
+
 function addProduct(){
 
 let name =
@@ -384,6 +536,11 @@ document.getElementById("productName").value;
 
 let price =
 document.getElementById("productPrice").value;
+
+if(name=="" || price==""){
+alert("Fill all fields");
+return;
+}
 
 let product =
 `
@@ -395,7 +552,8 @@ let product =
 
 <p>$${price}</p>
 
-<button onclick="buyItem('${name}')">
+<button class="btn"
+onclick="buyItem('${name}')">
 Buy Now
 </button>
 
@@ -405,7 +563,58 @@ Buy Now
 document.getElementById("productList")
 .innerHTML += product;
 
+alert("Product Added");
+
 }
+
+function sendMessage(){
+
+let input =
+document.getElementById("chatInput");
+
+if(input.value==""){
+return;
+}
+
+let message =
+`
+<div class="message">
+${input.value}
+</div>
+`;
+
+document.getElementById("chatArea")
+.innerHTML += message;
+
+input.value="";
+
+}
+
+function searchProducts(){
+
+let input =
+document.getElementById("searchInput")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="block";
+}
+else{
+card.style.display="none";
+}
+
+});
+
+}
+
 </script>
 
 </body>
